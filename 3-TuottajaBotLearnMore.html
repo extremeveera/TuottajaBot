@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta name="description" content="Page where you can learn more about TuottajaBot which is made for KAMK school assignment.">
+<meta name="keywords" content="discord, bot, kamk, kuas, student, students, producer, project, lead, game, video game, TuottajaBot, about, learn more, sadcat, help">
+<meta name="author" content="Minttu Mäntykangas, Veera Nuorteva">
+<meta http-equiv="refresh" content="30">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="TuottajaStyle1.css">
+<script>
+var audio = new Audio('cheersound1.wav'); audio.play();
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  document.getElementById("drop1").src = "happypicture.jpg";
+  audio.play();
+}
+</script>
+</head>
+<body>
+
+<h1>About TuottajaBot</h1>
+<p>TuottajaBot is a Discord bot made by two KAMK <br> producer students Minttu Mäntykangas and Veera Nuorteva.</p><br>
+<p>Try giving the sad cat TuottajaBot to make her happy</p>
+<img id="drop1" src="sadpicture.jpg" ondrop="drop(event)" ondragover="allowDrop(event)" width="300" height="300" class="center">
+<img id="drag1" src="tuottajapicture1.jpg" draggable="true" ondragstart="drag(event)" width="300" height="300" class="center">
+
+<h1>What does the bot say?</h1>
+
+<table>
+  <tr>
+    <th>User input</th>
+    <th>Bot reaction</th>
+  </tr>
+  <tr>
+    <td>new asset, new art</td>
+    <td>Great work artist! Lead, please review!</td>
+  </tr>
+  <tr>
+    <td>bug</td>
+    <td>All programmers, please solve this issue!</td>
+  </tr>
+  <tr>
+    <td>help</td>
+    <td>Your producer will help you soon!</td>
+  </tr>
+  <tr>
+    <td>sick</td>
+    <td>Oh no, please get well soon! You're a valuable part of the team.</td>
+  </tr>
+  <tr>
+    <td>new build</td>
+    <td>Great work everyone! Your producer shall review this very soon!</td>
+  </tr>
+  <tr>
+    <td>(at random intervals)</td>
+    <td>Remember to update your Hacknplan!</td>
+  </tr>
+</table>
+
+<p>KAMK Location:</p>
+<div class="mapouter"><div class="gmap_canvas">
+<iframe width="400" height="400" id="gmap_canvas" 
+src="https://maps.google.com/maps?q=kajaanin%20ammatti&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+</iframe><a href="https://www.crocothemes.net"></a></div>
+<style>.mapouter{position:relative;text-align:right;height:400px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:400px;}
+</style>
+</div>
+</body>
+</html>
