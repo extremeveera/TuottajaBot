@@ -68,3 +68,10 @@ td, th {
   margin-left: auto;
   margin-right: auto;
 }
+
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:400px;
+	width:400px;
+}
