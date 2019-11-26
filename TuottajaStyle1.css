@@ -75,3 +75,7 @@ td, th {
 	height:400px;
 	width:400px;
 }
+iframe {
+       display: block;
+	   margin: 0 auto;
+      }
